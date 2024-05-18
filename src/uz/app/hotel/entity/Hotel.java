@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.UUID;
 
 public class Hotel {
-    private final String  id=UUID.randomUUID().toString();
+    private final String id = UUID.randomUUID().toString();
     private String name;
     private Location location;
     private Integer floors;
@@ -55,10 +55,17 @@ public class Hotel {
         this.location = location;
     }
 
+<<<<<<< HEAD
     public String getId() {
         return id;
     }
 
+=======
+
+    public String getId() {
+        return id;
+    }
+>>>>>>> 68a110a72e1de36328e1dc16f64c861b082ce245
     public List<Room> getRooms() {
         return rooms;
     }
