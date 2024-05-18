@@ -1,5 +1,7 @@
 package uz.app.hotel.entity;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 public class Hotel {
@@ -8,12 +10,14 @@ public class Hotel {
     private Location location;
     private Integer floors;
     private Integer roomsCount;
+    private List<Room> rooms = new ArrayList<>();
 
-    public Hotel(String name, Location location, Integer floors, Integer roomsCount) {
+    public Hotel(String name, Location location, Integer floors, Integer roomsCount, List<Room> rooms) {
         this.name = name;
         this.location = location;
         this.floors = floors;
         this.roomsCount = roomsCount;
+        this.rooms = rooms;
     }
 
     public Integer getFloors() {
@@ -46,6 +50,14 @@ public class Hotel {
 
     public void setLocation(Location location) {
         this.location = location;
+    }
+
+    public List<Room> getRooms() {
+        return rooms;
+    }
+
+    public void setRooms(List<Room> rooms) {
+        this.rooms = rooms;
     }
 
     @Override
