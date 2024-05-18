@@ -9,14 +9,5 @@ public interface AdminService {
     void deleteHotel();
     void showUsers();
     void showReservationHistory();
-    void calcelReservation();
-    void reserveForUser();
-
-//    private static AdminService adminService ;
-//    public static AdminService getInstance(){
-//        if (adminService == null)
-//            adminService=new AdminService();
-//        return adminService;
-//    }
 
 }

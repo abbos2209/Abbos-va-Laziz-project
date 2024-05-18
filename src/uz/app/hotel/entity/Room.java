@@ -33,6 +33,7 @@ public class Room {
                 this.reservations = reservations;
         }
 
+
         @Override
         public String toString() {
                 return "Room{" +
