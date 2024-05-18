@@ -12,7 +12,7 @@ public class Hotel {
     private Integer roomsCount;
     private List<Room> rooms = new ArrayList<>();
 
-    public Hotel(String name, Location location, Integer floors, Integer roomsCount, List<Room> rooms) {
+    public Hotel(String name, Location location, Integer floors, Integer roomsCount) {
         this.name = name;
         this.location = location;
         this.floors = floors;
@@ -23,7 +23,6 @@ public class Hotel {
     public Hotel() {
 
     }
-
     public Integer getFloors() {
         return floors;
     }
@@ -56,10 +55,17 @@ public class Hotel {
         this.location = location;
     }
 
+<<<<<<< HEAD
+    public String getId() {
+        return id;
+    }
+
+=======
 
     public String getId() {
         return id;
     }
+>>>>>>> 68a110a72e1de36328e1dc16f64c861b082ce245
     public List<Room> getRooms() {
         return rooms;
     }

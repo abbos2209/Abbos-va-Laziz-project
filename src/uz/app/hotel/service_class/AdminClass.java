@@ -1,9 +1,7 @@
 package uz.app.hotel.service_class;
 
 import uz.app.hotel.database.DB;
-import uz.app.hotel.entity.Hotel;
-import uz.app.hotel.entity.Location;
-import uz.app.hotel.entity.User;
+import uz.app.hotel.entity.*;
 import uz.app.hotel.service.AdminService;
 
 import java.util.Objects;
@@ -40,12 +38,7 @@ public class AdminClass implements AdminService {
             case 7->{
                 showReservationHistory();
             }
-            case 8 ->{
-                calcelReservation();
-            }
-            case 9 ->{
-                reserveForUser();
-            }
+
         }
     }
     public int menu(){
@@ -58,8 +51,6 @@ public class AdminClass implements AdminService {
                 5 -> Delete Hotel
                 6 -> Show Users
                 7 -> Show Reserve history
-                8 -> Cancel Reservation
-                9 -> Reserve For User
                 """);
         return intScanner.nextInt();
     }
@@ -104,7 +95,7 @@ public class AdminClass implements AdminService {
         System.out.println("Enter Hotel ID");
         String id = strScanner.nextLine();
         for (Hotel hotel : db.getHotels()) {
-            Objects.equals(hotel.getId().toString(), id) {
+            if (Objects.equals(hotel.getId().toString(), id)) {
                 System.out.println(hotel);
                 break;
             }
@@ -123,7 +114,7 @@ public class AdminClass implements AdminService {
         System.out.println("Enter Hotel Id");
         String id = strScanner.nextLine();
         for (Hotel hotel : db.getHotels()) {
-            Objects.equals(hotel.getId().toString(), id){
+            if (Objects.equals(hotel.getId().toString(), id)) {
                 System.out.println("Enter Hotel name: ");
                 hotel.setName(strScanner.nextLine());
                 System.out.println("Enter Hotel Location(TASHKENT," +
@@ -181,11 +172,12 @@ public class AdminClass implements AdminService {
 
     @Override
     public void showReservationHistory() {
-
-    }
-
-    @Override
-    public void calcelReservation() {
-
+        for (Hotel hotel : db.getHotels()) {
+            for (Room room : hotel.getRooms()) {
+                for (Reservation reservation : room.getReservations()) {
+                    System.out.println();
+                }
+            }
+        }
     }
 }
