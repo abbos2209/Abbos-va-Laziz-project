@@ -1,8 +1,6 @@
 package uz.app.hotel.database;
 
-import uz.app.hotel.entity.Hotel;
-import uz.app.hotel.entity.Reservation;
-import uz.app.hotel.entity.User;
+import uz.app.hotel.entity.*;
 import uz.app.hotel.service.AdminService;
 import uz.app.hotel.service.UserService;
 
@@ -15,7 +13,7 @@ public class DB {
     private List<Hotel> hotels = new ArrayList<>();
     private List<Reservation> reservations = new ArrayList<>();
 
-    private static DB db ;
+    private static DB db;
     public static DB getInstance(){
         if (db == null)
             db=new DB();
