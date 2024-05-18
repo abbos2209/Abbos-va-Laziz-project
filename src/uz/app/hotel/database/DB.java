@@ -10,6 +10,7 @@ import java.util.List;
 public class DB {
     private List<User> users = new ArrayList<>();
     private User currentUser;
+    private Hotel currentHotel;
     private List<Hotel> hotels = new ArrayList<>();
     private List<Reservation> reservations = new ArrayList<>();
 
@@ -46,6 +47,14 @@ public class DB {
 
     public List<Reservation> getReservations() {
         return reservations;
+    }
+
+    public Hotel getCurrentHotel() {
+        return currentHotel;
+    }
+
+    public void setCurrentHotel(Hotel currentHotel) {
+        this.currentHotel = currentHotel;
     }
 
     public void setReservations(List<Reservation> reservations) {
