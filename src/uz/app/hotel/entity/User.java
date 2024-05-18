@@ -8,6 +8,8 @@ public class User {
     private String username;
     private String password;
 
+    private Role role;
+
     public User(String name, String username, String password) {
         this.name = name;
         this.username = username;
@@ -38,6 +40,14 @@ public class User {
         this.password = password;
     }
 
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -45,6 +55,7 @@ public class User {
                 ", name='" + name + '\'' +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
+                ", role=" + role +
                 '}';
     }
 }
