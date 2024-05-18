@@ -20,6 +20,10 @@ public class Hotel {
         this.rooms = rooms;
     }
 
+    public Hotel() {
+
+    }
+
     public Integer getFloors() {
         return floors;
     }
@@ -52,12 +56,17 @@ public class Hotel {
         this.location = location;
     }
 
+<<<<<<< HEAD
+    public String getId() {
+        return id;
+=======
     public List<Room> getRooms() {
         return rooms;
     }
 
     public void setRooms(List<Room> rooms) {
         this.rooms = rooms;
+>>>>>>> 60ec41ed2515730de1b82eafc533f1d01a28e861
     }
 
     @Override
