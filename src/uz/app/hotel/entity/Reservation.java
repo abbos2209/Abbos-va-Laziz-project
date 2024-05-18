@@ -7,19 +7,12 @@ public class Reservation {
     private final String  id= UUID.randomUUID().toString();
     private User user;
     private Hotel hotel;
-    private Integer floor;
-    private Integer room;
     private LocalDate startDate;
     private LocalDate endDate;
-    private LocalDate earliestFinishedDate;
-    private Boolean earlierFinished;
-
 
     public Reservation(User user, Hotel hotel, Integer floor, Integer room, LocalDate startDate, LocalDate endDate) {
         this.user = user;
         this.hotel = hotel;
-        this.floor = floor;
-        this.room = room;
         this.startDate = startDate;
         this.endDate = endDate;
     }
@@ -44,22 +37,6 @@ public class Reservation {
         this.hotel = hotel;
     }
 
-    public Integer getFloor() {
-        return floor;
-    }
-
-    public void setFloor(Integer floor) {
-        this.floor = floor;
-    }
-
-    public Integer getRoom() {
-        return room;
-    }
-
-    public void setRoom(Integer room) {
-        this.room = room;
-    }
-
     public LocalDate getStartDate() {
         return startDate;
     }
@@ -82,8 +59,6 @@ public class Reservation {
                 "id='" + id + '\'' +
                 ", user=" + user +
                 ", hotel=" + hotel +
-                ", floor=" + floor +
-                ", room=" + room +
                 ", startDate=" + startDate +
                 ", endDate=" + endDate +
                 '}';
