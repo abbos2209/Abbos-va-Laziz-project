@@ -16,6 +16,10 @@ public class Hotel {
         this.roomsCount = roomsCount;
     }
 
+    public Hotel() {
+
+    }
+
     public Integer getFloors() {
         return floors;
     }
@@ -46,6 +50,10 @@ public class Hotel {
 
     public void setLocation(Location location) {
         this.location = location;
+    }
+
+    public String getId() {
+        return id;
     }
 
     @Override

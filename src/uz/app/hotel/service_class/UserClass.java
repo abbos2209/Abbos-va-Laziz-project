@@ -2,12 +2,12 @@ package uz.app.hotel.service_class;
 
 import uz.app.hotel.database.DB;
 import uz.app.hotel.service.UserService;
+import static uz.app.hotel.Utill.Utill.*;
 
 public class UserClass implements UserService {
         DB db = DB.getInstance();
     @Override
     public void service() {
-        while (true)
             switch (menu()){
                 case 0 ->{
                     System.out.println("See you soon!");
@@ -31,7 +31,8 @@ public class UserClass implements UserService {
                 case 6 ->{
                     showHistory();
                 }
-            }
+
+    }
     }
     public int menu(){
         System.out.println("""
@@ -43,7 +44,7 @@ public class UserClass implements UserService {
                 5 -> reschedule Reservation
                 6 -> Show history
                 """);
-        return
+        return intScanner.nextInt();
     }
 
     @Override
